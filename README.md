@@ -36,7 +36,6 @@ This repository is intended for:
 
 - Standards bodies and institutional validators  
 - Government entities evaluating safety-critical IoT deployments  
-- Audit teams reviewing RTGS, APIS, and Access Assets integration logic
 
 It is **not** intended for commercial deployment, promotional use, or redistribution.
 
@@ -51,8 +50,8 @@ All content is governed by the **FSAI-IOT-Automation License v1.0**, which permi
 ## Contact
 
 For validator access, audit coordination, or licensing inquiries:  
-📧 legal@extreme-spartan.in  
-📧 fsai@extreme-spartan.in
+📧 spn@extreme-spartan.com 
+📧 fsai@extreme-spartan.com
 
 ---
 
