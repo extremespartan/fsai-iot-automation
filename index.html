@@ -1,15 +1,657 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="AXA SRE's along with Squad Teams keep the infrastructure up and running with a commitment to the agreed SLA(s)"><meta name=author content="Sridhar P Naidu"><link href=https://extreme-spartan.com/fsai-iot-automation/ rel=canonical><link rel=icon href=assets/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-8.3.4"><title>Welcome to FSAI - IoT & Automation Commitee - FSAI - IoT & Automation Commitee</title><link rel=stylesheet href=assets/stylesheets/main.4a0965b7.min.css><link rel=stylesheet href=assets/stylesheets/palette.cbb835fc.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=blue data-md-color-accent=yellow> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#home class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=. title="FSAI - IoT & Automation Commitee" class="md-header__button md-logo" aria-label="FSAI - IoT & Automation Commitee" data-md-component=logo> <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"> --> <!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--> <!-- <path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/>
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="AXA SRE's along with Squad Teams keep the infrastructure up and running with a commitment to the agreed SLA(s)"><meta name=author content="Sridhar P Naidu"><link href=https://extreme-spartan.com/fsai-iot-automation/ rel=canonical><link rel=icon href=assets/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-8.3.4"><title>Welcome to FSAI - IoT & Automation Commitee - FSAI - IoT & Automation Commitee</title><link rel=stylesheet href=assets/stylesheets/main.4a0965b7.min.css><link rel=stylesheet href=assets/stylesheets/palette.cbb835fc.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=blue data-md-color-accent=yellow> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#speak-your-mind-correct-the-course class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=. title="FSAI - IoT & Automation Commitee" class="md-header__button md-logo" aria-label="FSAI - IoT & Automation Commitee" data-md-component=logo> <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"> --> <!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--> <!-- <path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/>
 </svg> --> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 200 50"> <text x=0 y=38 font-size=45 font-family=Arial font-weight=bold> <tspan fill=red>D</tspan> <tspan fill=blue>R</tspan> <tspan fill=gold>A</tspan> <tspan fill=cyan>P</tspan> <tspan fill=orange>E</tspan> </text> </svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> FSAI - IoT & Automation Commitee </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Welcome to FSAI - IoT & Automation Commitee </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=blue data-md-color-accent=yellow aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=violet data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg> </a> <button type=reset class="md-search__icon md-icon" aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/extremespartan/fsai-iot-automation/issues/new/choose title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> Raise an issue </div> </a> </div> </nav> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=. class="md-tabs__link md-tabs__link--active"> Home </a> </li> <li class=md-tabs__item> <a href=ocean_disasters/ class=md-tabs__link> Ocean Disasters </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation hidden> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=. title="FSAI - IoT & Automation Commitee" class="md-nav__button md-logo" aria-label="FSAI - IoT & Automation Commitee" data-md-component=logo> <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"> --> <!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--> <!-- <path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/>
-</svg> --> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 200 50"> <text x=0 y=38 font-size=45 font-family=Arial font-weight=bold> <tspan fill=red>D</tspan> <tspan fill=blue>R</tspan> <tspan fill=gold>A</tspan> <tspan fill=cyan>P</tspan> <tspan fill=orange>E</tspan> </text> </svg> </a> FSAI - IoT & Automation Commitee </label> <div class=md-nav__source> <a href=https://github.com/extremespartan/fsai-iot-automation/issues/new/choose title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> Raise an issue </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Home <span class="md-nav__icon md-icon"></span> </label> <a href=. class="md-nav__link md-nav__link--active"> Home </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#explore-the-following-sections class=md-nav__link> Explore the Following Sections: </a> </li> <li class=md-nav__item> <a href=#overview-of-navigation class=md-nav__link> Overview of Navigation </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <div class="md-nav__link md-nav__link--index "> <a href=ocean_disasters/ >Ocean Disasters</a> <label for=__nav_2> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label="Ocean Disasters" data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Ocean Disasters </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=ocean_disasters/overview/ class=md-nav__link> Overview </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_3 type=checkbox id=__nav_2_3> <label class=md-nav__link for=__nav_2_3> Critical Disasters <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Critical Disasters" data-md-level=2> <label class=md-nav__title for=__nav_2_3> <span class="md-nav__icon md-icon"></span> Critical Disasters </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=ocean_disasters/oil_spills/ class=md-nav__link> Oil Spills </a> </li> <li class=md-nav__item> <a href=ocean_disasters/coral_bleaching/ class=md-nav__link> Coral Bleaching </a> </li> <li class=md-nav__item> <a href=ocean_disasters/coastal_erosion/ class=md-nav__link> Coastal Erosion </a> </li> <li class=md-nav__item> <a href=ocean_disasters/rip_currents/ class=md-nav__link> Rip Currents </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_4 type=checkbox id=__nav_2_4> <label class=md-nav__link for=__nav_2_4> Monitoring Technologies <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Monitoring Technologies" data-md-level=2> <label class=md-nav__title for=__nav_2_4> <span class="md-nav__icon md-icon"></span> Monitoring Technologies </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=monitoring_technologies/traditional_methods/ class=md-nav__link> Traditional Methods </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/drone_technology/ class=md-nav__link> Drone Technology </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/mcu_payloads/ class=md-nav__link> Microcontroller-Based Payloads (ESCAPE Architecture) </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/lidar_modalities/ class=md-nav__link> LiDAR Modalities & Use Cases </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/uid_ota_architecture/ class=md-nav__link> UID Traceability & OTA Firmware </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_5 type=checkbox id=__nav_2_5> <label class=md-nav__link for=__nav_2_5> Future Directions <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Future Directions" data-md-level=2> <label class=md-nav__title for=__nav_2_5> <span class="md-nav__icon md-icon"></span> Future Directions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=future_directions/ai_integration/ class=md-nav__link> AI Integration </a> </li> <li class=md-nav__item> <a href=future_directions/international_collaboration/ class=md-nav__link> International Collaboration </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=key_takeaways/ class=md-nav__link> Key Takeaways </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_7 type=checkbox id=__nav_2_7> <label class=md-nav__link for=__nav_2_7> Annexures <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Annexures data-md-level=2> <label class=md-nav__title for=__nav_2_7> <span class="md-nav__icon md-icon"></span> Annexures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=annexures/glossary/ class=md-nav__link> Technical Glossary </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#explore-the-following-sections class=md-nav__link> Explore the Following Sections: </a> </li> <li class=md-nav__item> <a href=#overview-of-navigation class=md-nav__link> Overview of Navigation </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/extremespartan/fsai-iot-automation/issues/new/choose/edit/master/docs/index.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg> </a> <h1 id=home>Home<a class=headerlink href=#home title="Permanent link">&para;</a></h1> <p>Welcome to the Ocean Disaster Management and Data Storytelling Guide! This resource aims to enhance your understanding of ocean disasters, effective monitoring technologies, and the integration of geospatial tools for comprehensive ecological management.</p> <h2 id=explore-the-following-sections>Explore the Following Sections:<a class=headerlink href=#explore-the-following-sections title="Permanent link">&para;</a></h2> <ul> <li><strong>Understanding Ocean Disasters</strong>: Learn about critical oceanic challenges, including oil spills, coral bleaching, and coastal erosion.</li> <li><strong>Monitoring Technologies</strong>: Discover traditional and modern methods for monitoring ocean conditions, including drone technology and Google Earth Engine.</li> <li><strong>Geospatial Tools</strong>: Dive into various geospatial technologies, their applications, and the importance of data storytelling in ecological management.</li> <li><strong>Real-World Data Integration</strong>: Understand how satellite imagery, drone data, and sensor information can create a comprehensive view of coastal ecosystems.</li> <li><strong>Marine Protected Areas (MPAs)</strong>: Explore the significance of MPAs and effective management strategies.</li> <li><strong>Data Management and Open Science</strong>: Discover best practices for data management and tools for open science communication.</li> <li><strong>Integration Strategies</strong>: Learn about data fusion and real-world case studies.</li> <li><strong>Challenges and Solutions</strong>: Identify common challenges and potential solutions in ocean disaster management.</li> <li><strong>Future Directions</strong>: Explore the role of AI and international collaboration in advancing ocean management.</li> </ul> <h2 id=overview-of-navigation>Overview of Navigation<a class=headerlink href=#overview-of-navigation title="Permanent link">&para;</a></h2> <pre class=mermaid><code>flowchart LR
-    A[Home] --&gt; B[Understanding Ocean Disasters]
-    A --&gt; C[Monitoring Technologies]
-    A --&gt; D[Geospatial Tools]
-    A --&gt; E[Real-World Data Integration]
-    A --&gt; F[Marine Protected Areas]
-    A --&gt; G[Data Management and Open Science]
-    A --&gt; H[Integration Strategies]
-    A --&gt; I[Challenges and Solutions]
-    A --&gt; J[Future Directions]</code></pre> <p><a href=ocean_disasters/overview/ class="md-button md-button--primary">Ocean Disasters →</a> <a class=md-button href=ocean_disasters/contacts.md>Contact Us →</a></p> </article> </div> </div> <a href=# class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </a> </main> <footer class=md-footer> <b>SPN</b> <div class="md-footer-meta md-typeset"> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": ".", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script> <script src=assets/javascripts/bundle.431f3d41.min.js></script> </script> <script>
+</svg> --> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 200 50"> <text x=0 y=38 font-size=45 font-family=Arial font-weight=bold> <tspan fill=red>D</tspan> <tspan fill=blue>R</tspan> <tspan fill=gold>A</tspan> <tspan fill=cyan>P</tspan> <tspan fill=orange>E</tspan> </text> </svg> </a> FSAI - IoT & Automation Commitee </label> <div class=md-nav__source> <a href=https://github.com/extremespartan/fsai-iot-automation/issues/new/choose title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> Raise an issue </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Home <span class="md-nav__icon md-icon"></span> </label> <a href=. class="md-nav__link md-nav__link--active"> Home </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#advanced-ai-powered-public-grievance-redress-system class=md-nav__link> Advanced AI-Powered Public Grievance Redress System </a> </li> <li class=md-nav__item> <a href=#purpose class=md-nav__link> Purpose </a> </li> <li class=md-nav__item> <a href=#live-interface-features class=md-nav__link> Live Interface Features </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <div class="md-nav__link md-nav__link--index "> <a href=ocean_disasters/ >Ocean Disasters</a> <label for=__nav_2> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label="Ocean Disasters" data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Ocean Disasters </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=ocean_disasters/overview/ class=md-nav__link> Overview </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_3 type=checkbox id=__nav_2_3> <label class=md-nav__link for=__nav_2_3> Critical Disasters <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Critical Disasters" data-md-level=2> <label class=md-nav__title for=__nav_2_3> <span class="md-nav__icon md-icon"></span> Critical Disasters </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=ocean_disasters/oil_spills/ class=md-nav__link> Oil Spills </a> </li> <li class=md-nav__item> <a href=ocean_disasters/coral_bleaching/ class=md-nav__link> Coral Bleaching </a> </li> <li class=md-nav__item> <a href=ocean_disasters/coastal_erosion/ class=md-nav__link> Coastal Erosion </a> </li> <li class=md-nav__item> <a href=ocean_disasters/rip_currents/ class=md-nav__link> Rip Currents </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_4 type=checkbox id=__nav_2_4> <label class=md-nav__link for=__nav_2_4> Monitoring Technologies <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Monitoring Technologies" data-md-level=2> <label class=md-nav__title for=__nav_2_4> <span class="md-nav__icon md-icon"></span> Monitoring Technologies </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=monitoring_technologies/traditional_methods/ class=md-nav__link> Traditional Methods </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/drone_technology/ class=md-nav__link> Drone Technology </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/mcu_payloads/ class=md-nav__link> Microcontroller-Based Payloads (ESCAPE Architecture) </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/lidar_modalities/ class=md-nav__link> LiDAR Modalities & Use Cases </a> </li> <li class=md-nav__item> <a href=monitoring_technologies/uid_ota_architecture/ class=md-nav__link> UID Traceability & OTA Firmware </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_5 type=checkbox id=__nav_2_5> <label class=md-nav__link for=__nav_2_5> Future Directions <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Future Directions" data-md-level=2> <label class=md-nav__title for=__nav_2_5> <span class="md-nav__icon md-icon"></span> Future Directions </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=future_directions/ai_integration/ class=md-nav__link> AI Integration </a> </li> <li class=md-nav__item> <a href=future_directions/international_collaboration/ class=md-nav__link> International Collaboration </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=key_takeaways/ class=md-nav__link> Key Takeaways </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_7 type=checkbox id=__nav_2_7> <label class=md-nav__link for=__nav_2_7> Annexures <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Annexures data-md-level=2> <label class=md-nav__title for=__nav_2_7> <span class="md-nav__icon md-icon"></span> Annexures </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=annexures/glossary/ class=md-nav__link> Technical Glossary </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#advanced-ai-powered-public-grievance-redress-system class=md-nav__link> Advanced AI-Powered Public Grievance Redress System </a> </li> <li class=md-nav__item> <a href=#purpose class=md-nav__link> Purpose </a> </li> <li class=md-nav__item> <a href=#live-interface-features class=md-nav__link> Live Interface Features </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/extremespartan/fsai-iot-automation/issues/new/choose/edit/master/docs/index.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg> </a> <h1 id=speak-your-mind-correct-the-course>Speak Your Mind – Correct the Course<a class=headerlink href=#speak-your-mind-correct-the-course title="Permanent link">&para;</a></h1> <h2 id=advanced-ai-powered-public-grievance-redress-system>Advanced AI-Powered Public Grievance Redress System<a class=headerlink href=#advanced-ai-powered-public-grievance-redress-system title="Permanent link">&para;</a></h2> <p><strong>Powered by:</strong> Extreme-Spartan Cognitive Industries Pvt. Ltd.<br> <strong>Aligned with:</strong> RTGS AI Hackathon Challenge – AP Innovation Society</p> <hr> <h2 id=purpose>Purpose<a class=headerlink href=#purpose title="Permanent link">&para;</a></h2> <p>To empower citizens with a multilingual, mobile-first interface for submitting grievances, capturing evidence, and receiving AI-driven feedback—all traceable, auditable, and ready for RTGS deployment.</p> <hr> <h2 id=live-interface-features>Live Interface Features<a class=headerlink href=#live-interface-features title="Permanent link">&para;</a></h2> <!-- <html> --> <!-- <head> --> <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #final_span, #interim_span { display: block; margin-top: 10px; font-size: 1.2em; }
+    button, select, textarea { margin: 10px 10px 10px 0; padding: 10px; font-size: 1em; }
+    .collapsible {
+      background-color: #f9f9f9;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: 10px;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .content { display: none; padding: 10px; border: 1px solid #ddd; }
+    #preview-box {
+      margin-top: 40px; padding: 20px;
+      background: #f6f9fb; border: 2px dashed #ccc;
+    }
+    .preview-style {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f6f9fb;
+      border: 2px dashed #ccc;
+      white-space: pre-line;
+    }
+    button {
+      padding: 2px 10px;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      /* font-weight: bold; */
+      border: 2px solid #0078D4;
+      background-color: #E6F0FF;
+      color: #0078D4;
+      border-radius: 6px;
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0078D4;
+      color: #ffffff;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px 10px;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      border: 2px solid #0078D4;
+      border-radius: 10px;
+      background-color: #F0F8FF;
+      color: #333;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      resize: vertical;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #player {
+      width: 100%;
+      max-width: 600px; /* Optional: constrain max size */
+      height: auto;
+      aspect-ratio: 16 / 9; /* Maintains consistent shape */
+      border-radius: 8px;   /* Optional: rounded corners */
+      background: black;    /* Prevents white flash before stream loads */
+      display: block;
+      margin: 0 auto;
+    }
+    textarea:focus {
+      border-color: #005A9E;
+      box-shadow: 0 0 5px rgba(0,120,212,0.5);
+      outline: none;
+    }
+    .responsive-media {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .responsive-media video,
+    .responsive-media audio {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    select {
+      padding: 2px 10px;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      border: 2px solid #0078D4;
+      border-radius: 6px;
+      background-color: #E6F0FF;
+      color: #0078D4;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    select:focus {
+      border-color: #005A9E;
+      box-shadow: 0 0 5px rgba(0,120,212,0.5);
+      outline: none;
+    }
+  </style> <!-- </head> --> <!-- <body> --> <!-- <h3>🎙️ Voice Recognition Interface</h3>
+  <label for="languageSelect"><strong>Select Language:</strong></label>
+  <select id="languageSelect" onchange="updateLanguage()">
+    <option value="en-IN">English (India)</option>
+    <option value="te-IN">Telugu (India)</option>
+    <option value="hi-IN">Hindi (India)</option>
+    <option value="ta-IN">Tamil (India)</option>
+    <option value="kn-IN">Kannada (India)</option>
+    <option value="ml-IN">Malayalam (India)</option>
+  </select>
+  <br> --> <!-- | Language Selection | Expertise Selection | Sentiment Analysis Outcome |
+  |--------------------|---------------------|-----------------------------|
+  | <select id="languageSelect" onchange="updateLanguage()"> <option value="en-IN">English (India)</option> <option value="te-IN">Telugu (India)</option> <option value="hi-IN">Hindi (India)</option> <option value="ta-IN">Tamil (India)</option> <option value="kn-IN">Kannada (India)</option> <option value="ml-IN">Malayalam (India)</option> </select> | <select id="expertiseDropdown"> <option value="math">Math Expert</option> <option value="medical">Medical Coder</option> <option value="modernization">Software Modernization</option> </select> | <div id="sentimentBox"><strong>Awaiting input…</strong></div> | --> <!-- <section id='appinfo' style='display: none;'>
+  <div id='mobinp'>
+    <input type="file" name="video" accept="video/*,image/*" >
+  </div>
+  <div id='dskinp'>
+    <div id="buttons">
+      <button id="capture" onclick="snapClick()">Capture</button>
+      <button class="record" style="">Record</button>
+      <button class="stop" disabled="">Stop</button>
+    </div>
+    <video id="player" autoplay playsinline></video><br>
+    <canvas id="snapshot" width=200 height=150 style="display:none;"></canvas>
+  </div>
+</section> --> <div id=mediaInterface> <video id=player autoplay playsinline muted></video> <canvas id=snapshot width=200 height=150 style=display:none;></canvas> </div> <!-- <section class="main-controls">
+  <canvas class="visualizer" height="60px" width="1000"></canvas>
+</section> --> <!-- <label for="expertiseDropdown">Select Expertise:</label>
+<select id="expertiseDropdown">
+  <option value="math">Math Expert</option>
+  <option value="medical">Medical Coder</option>
+  <option value="modernization">Software Modernization</option>
+</select>    --> <div id=toggleButton> <div id=controls> <button id=record>Record</button> <button id=stop disabled>Stop</button> <button id=toggleCameraBtn style=display:none;>Switch Camera</button> <button id=capture onclick=snapClick()>Capture</button> </div> <!-- <label for="languageSelect">Select Language:</label> --> <select id=languageSelect onchange=updateLanguage()> <option value=en-IN>English (India)</option> <option value=te-IN>Telugu (India)</option> <option value=hi-IN>Hindi (India)</option> <option value=ta-IN>Tamil (India)</option> <option value=kn-IN>Kannada (India)</option> <option value=ml-IN>Malayalam (India)</option> </select><img id=micIcon src=mic-off.gif alt="Mic Icon" style="height:40px; vertical-align:middle;"><span id=micLabel>Speech to Text - Inactive</span> </div> <!-- <button onclick="startRecognition()">Start Listening</button>
+<button onclick="stopRecognition()">Stop Listening</button> --> <div> <strong>Speech Transcript:</strong> <span id=interim_span></span> </div> <!-- <label for="userMessage">Click and Speak or Enter your message below:</label>
+<br> --> <textarea id=userMessage rows=4 cols=50 placeholder="Type your question/grieviance here..."></textarea> <p><button onclick=submitMessage()>Submit</button></p> <div> <strong></strong> <span id=final_span></span> </div> <hr> <div id=preview-box> <strong>🔍 Your output will appear here after clicking "Submit"…</strong> </div> <h4>Resulting Message Object:</h4> <pre id=result style="background:#f4f4f4;padding:10px;border:1px solid #ddd;"></pre> <section class=sound-clips> </section> <div class=highlight><pre><span></span><code>
+</code></pre></div> <p><img id=waitImg class=responsive></p> <div id=tcon></div> <h4>Previous Conversations:</h4> <div id=history></div> <script src=https://code.jquery.com/jquery-3.3.1.slim.min.js></script> <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js></script> <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js></script> <script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script> <script src=https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js></script> <script src=https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js></script> <script src=https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd></script> <div class=highlight><pre><span></span><code>&lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.json-viewer.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;stylesheets/jquery.json-viewer.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;/&gt;
+</code></pre></div> <script>
+    var ctr = 0;
+    var controller = null;
+    var player = document.getElementById('player'); 
+    var snapshotCanvas = document.getElementById('snapshot');
+    var captureButton = document.getElementById('capture');
+    // var video1 = document.getElementById("usrVideo");
+    var videoTracks;
+    //videoTracks.forEach(function(track) {track.stop()});
+    var canStream;
+    var theStream;
+    var theRecorder;
+    var recordedChunks = [];     
+    var responseText = ""; 
+const record = document.getElementById("record");
+const stop = document.getElementById("stop");
+  const soundClips = document.querySelector('.sound-clips');
+  // const canvas = document.querySelector('.visualizer');
+  const mainSection = document.querySelector('.main-controls');
+  let audioCtx = null;
+  // const canvasCtx = canvas.getContext("2d");
+  const clipName = generateRandomFileName();
+let audioStreamGlobal, videoStreamGlobal; 
+let audioStream, videoStream;
+let combinedStream;
+let audioRecorder, videoRecorder;
+let audioChunks = [], videoChunks = [];
+// let recordedAudioBlob, recordedVideoBlob;
+let currentFacingMode = "user"; // 'user' = front, 'environment' = back
+  let recognizing = false;
+  let manuallyStopped = false;
+  let final_transcript = '';
+  let capturedImageBlob = null; // Declare globally at the top of your script
+  let recordedAudioBlob = null;
+  let recordedVideoBlob = null;
+  const final_span = document.getElementById('final_span');
+  const interim_span = document.getElementById('interim_span');
+  const languageSelect = document.getElementById('languageSelect');
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.lang = languageSelect.value;
+  recognition.onstart = () => {
+    recognizing = true;
+    manuallyStopped = false;
+  };
+  recognition.onresult = function(event) {
+    let interim_transcript = '';
+    let final_text = document.getElementById("userMessage").value;
+    for (let i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        final_text += event.results[i][0].transcript;
+      } else {
+        interim_transcript += event.results[i][0].transcript;
+      }
+    }
+    document.getElementById("userMessage").value = capitalize(final_text);
+    interim_span.innerHTML = linebreak(interim_transcript); // Optional: keep interim display
+  };
+  recognition.onerror = (event) => {
+    console.error('Recognition error:', event.error);
+  };
+  recognition.onend = () => {
+    recognizing = false;
+    if (!manuallyStopped) recognition.start();
+  };
+  function startRecognition() {
+    final_transcript = '';
+    recognition.lang = languageSelect.value;
+    recognition.start();
+  }
+  function stopRecognition() {
+    manuallyStopped = true;
+    recognition.stop();
+    interim_span.innerHTML = ''; // Clear interim if needed
+  }
+  function updateLanguage() {
+    recognition.lang = languageSelect.value;
+    if (recognizing) {
+      recognition.stop();
+      recognition.start();
+    }
+  }
+  function capitalize(s) {
+    return s.replace(/\S/, function(m) { return m.toUpperCase(); });
+  }
+  function linebreak(s) {
+    return s.replace(/\n\n/g, '<p></p>').replace(/\n/g, '<br>');
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    loadPreviousMessages();
+  });
+  function submitMessage() {
+    const userMessage = document.getElementById("userMessage").value.trim();
+    if (!userMessage) {
+      alert("Please enter a message.");
+      return;
+    }
+    const payload = {
+      userMessage: userMessage,
+      voice: ""
+    };
+    fetch("https://botobiography.com/udayasri/process-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload),
+    })
+    .then(response => response.json())
+    .then(response => {
+      const data = response.openaiResponseText;
+      document.getElementById("preview-box").innerHTML = marked.parse(data);
+      // saveMessage(userMessage, data);
+      saveMessage({
+        userMessage: document.getElementById("userMessage").value,
+        messageObject: data,
+        imageBlob: capturedImageBlob,
+        audioBlob: recordedAudioBlob,
+        videoBlob: recordedVideoBlob,
+        finalTranscript: document.getElementById("result").value
+      });
+      displayMessageObject(data);
+    })
+    .catch(error => console.error("Error:", error));
+  }
+function displayMessageObject(messageObject) {
+  const textContainer = document.getElementById("result");
+  textContainer.style.whiteSpace = "pre-line";
+  textContainer.innerText = messageObject;
+  // Clear history and reload previous messages
+  document.getElementById("history").innerHTML = "";
+  loadPreviousMessages();
+  // Load latest saved message from localStorage
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+  const last = messages[messages.length - 1];
+  if (!last) return;
+  // Optional: Append media preview below result
+  const previewBox = document.getElementById("preview-box");
+  previewBox.innerHTML = ""; // Clear previous preview
+  if (last.imageURL) {
+    const img = document.createElement("img");
+    img.src = last.imageURL;
+    img.alt = "Captured Image";
+    img.style.maxWidth = "auto";
+    previewBox.appendChild(img);
+  }
+  if (last.audioURL) {
+    const audio = document.createElement("audio");
+    audio.src = last.audioURL;
+    audio.controls = true;
+    previewBox.appendChild(audio);
+  }
+  if (last.videoURL) {
+    const video = document.createElement("video");
+    video.src = last.videoURL;
+    video.controls = true;
+    video.style.maxWidth = "auto";
+    previewBox.appendChild(video);
+  }
+  if (last.finalTranscript) {
+    const transcript = document.createElement("p");
+    transcript.textContent = "Transcript: " + last.finalTranscript;
+    previewBox.appendChild(transcript);
+  }
+}
+function saveMessage({
+  userMessage,
+  messageObject,
+  imageBlob = null,
+  audioBlob = null,
+  videoBlob = null,
+  finalTranscript = ""
+}) {
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+  const entry = {
+    timestamp: new Date().toISOString(),
+    userMessage,
+    messageObject,
+    finalTranscript
+  };
+  if (imageBlob) {
+    entry.imageURL = URL.createObjectURL(imageBlob);
+  }
+  if (audioBlob) {
+    entry.audioURL = URL.createObjectURL(audioBlob);
+  }
+  if (videoBlob) {
+    entry.videoURL = URL.createObjectURL(videoBlob);
+  }
+  messages.push(entry);
+  localStorage.setItem("messages", JSON.stringify(messages));
+}
+function loadPreviousMessages() {
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+  const historyContainer = document.getElementById("history");
+  historyContainer.innerHTML = ""; // Clear existing history
+  messages.reverse().forEach((msg, index) => {
+    const button = document.createElement("button");
+    button.innerText = `Question/Grievance ${messages.length - index}`;
+    button.className = "collapsible";
+    button.onclick = function () {
+      this.nextElementSibling.style.display =
+        this.nextElementSibling.style.display === "none" ? "block" : "none";
+    };
+    const content = document.createElement("div");
+    content.className = "preview-style";
+    content.style.display = index === 0 ? "block" : "none";
+    content.style.whiteSpace = "pre-line";
+    // Render grievance and AI response
+    const grievance = document.createElement("p");
+    grievance.innerHTML = `<strong>Grievance:</strong> ${msg.userMessage}`;
+    content.appendChild(grievance);
+    const response = document.createElement("p");
+    response.innerHTML = `<strong>AI Response:</strong><br>${msg.messageObject}`;
+    content.appendChild(response);
+    // Render transcript if available
+    if (msg.finalTranscript) {
+      const transcript = document.createElement("p");
+      transcript.innerHTML = `<strong>Transcript:</strong> ${msg.finalTranscript}`;
+      content.appendChild(transcript);
+    }
+    // Render image preview
+    if (msg.imageURL) {
+      const img = document.createElement("img");
+      img.src = msg.imageURL;
+      img.alt = "Captured Image";
+      img.style.maxWidth = "300px";
+      content.appendChild(img);
+    }
+    // Render audio preview
+    if (msg.audioURL) {
+      const audio = document.createElement("audio");
+      audio.src = msg.audioURL;
+      audio.controls = true;
+      content.appendChild(audio);
+    }
+    // Render video preview
+    if (msg.videoURL) {
+      const video = document.createElement("video");
+      video.src = msg.videoURL;
+      video.controls = true;
+      video.style.maxWidth = "300px";
+      content.appendChild(video);
+    }
+    historyContainer.appendChild(button);
+    historyContainer.appendChild(content);
+  });
+}
+async function startCombinedStream(facing = "user") {
+  try {
+    const videoStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: { ideal: facing }, width: { ideal: 1280 }, height: { ideal: 720 } }
+    });
+    const audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const combinedStream = new MediaStream([
+      ...videoStream.getVideoTracks(),
+      ...audioStream.getAudioTracks()
+    ]);
+    console.log("Audio tracks in combinedStream:", combinedStream.getAudioTracks());
+    videoStreamGlobal = combinedStream; // for live preview
+    const player = document.getElementById("player");
+    player.srcObject = combinedStream;
+    player.play();
+    videoRecorder = new MediaRecorder(combinedStream);
+    videoChunks = [];
+    videoRecorder.ondataavailable = e => {
+      if (e.data.size > 0) videoChunks.push(e.data);
+    };
+    videoRecorder.onstop = () => {
+      recordedVideoBlob = new Blob(videoChunks, { type: 'video/webm; codecs=vp8' }); // Edge-safe
+      const videoURL = URL.createObjectURL(recordedVideoBlob);
+      renderClip(videoURL, 'video');
+      snapClick();
+    };
+  } catch (err) {
+    console.error("Combined stream failed:", err.name, err.message);
+  }
+}
+function startAudioStream() {
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(stream => {
+      audioStream = stream;
+      audioRecorder = new MediaRecorder(stream);
+      audioChunks = [];
+      audioRecorder.ondataavailable = e => {
+        if (e.data.size > 0) audioChunks.push(e.data);
+      };
+      audioRecorder.onstop = () => {
+        recordedAudioBlob = new Blob(audioChunks, { type: 'audio/ogg; codecs=opus' });
+        const audioURL = URL.createObjectURL(recordedAudioBlob);
+        renderClip(audioURL, 'audio');
+      };
+    });
+}
+function startVideoStream(facing = "user") {
+  const constraints = {
+    video: {
+      facingMode: { ideal: facing }, // 'ideal' avoids OverconstrainedError
+      width: { ideal: 1280 },
+      height: { ideal: 720 }
+    },
+    audio: false
+  };
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(stream => {
+      videoStream = stream;
+      const player = document.getElementById("player"); // safer than assuming global
+      player.srcObject = stream;
+      player.play();
+      videoRecorder = new MediaRecorder(stream);
+      videoChunks = [];
+      videoRecorder.ondataavailable = e => {
+        if (e.data.size > 0) videoChunks.push(e.data);
+      };
+      videoRecorder.onstop = () => {
+        recordedVideoBlob = new Blob(videoChunks, { type: 'video/webm; codecs=vp8' });
+        const videoURL = URL.createObjectURL(recordedVideoBlob);
+        renderClip(videoURL, 'video');
+        snapClick(); // capture snapshot from video
+      };
+    })
+    .catch(err => {
+      console.error("Video stream failed:", err.name, err.message);
+      // Fallback: try without facingMode
+      if (err.name === "OverconstrainedError") {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => {
+            videoStream = stream;
+            const player = document.getElementById("player");
+            player.srcObject = stream;
+            player.play();
+            videoRecorder = new MediaRecorder(stream);
+            videoChunks = [];
+            videoRecorder.ondataavailable = e => {
+              if (e.data.size > 0) videoChunks.push(e.data);
+            };
+            videoRecorder.onstop = () => {
+              recordedVideoBlob = new Blob(videoChunks, { type: 'video/webm; codecs=vp8' });
+              const videoURL = URL.createObjectURL(recordedVideoBlob);
+              renderClip(videoURL, 'video');
+              snapClick();
+            };
+          })
+          .catch(fallbackErr => {
+            console.error("Fallback video stream failed:", fallbackErr.name, fallbackErr.message);
+          });
+      }
+    });
+}
+function renderClip(url, type) {
+  const clipContainer = document.createElement('article');
+  const clipLabel = document.createElement('p');
+  const responsiveWrapper = document.createElement('div');
+  const media = document.createElement(type);
+  const deleteButton = document.createElement('button');
+  clipContainer.classList.add('clip');
+  responsiveWrapper.classList.add('responsive-media');
+  media.setAttribute('controls', '');
+  media.src = url;
+  media.autoplay = true;
+  deleteButton.textContent = 'Delete';
+  deleteButton.className = 'delete';
+  clipLabel.textContent = 'My unnamed clip';
+  clipLabel.onclick = () => {
+    const newName = prompt('Enter a new name for your clip');
+    if (newName) clipLabel.textContent = newName;
+  };
+  deleteButton.onclick = e => {
+    e.target.closest(".clip").remove();
+  };
+  responsiveWrapper.appendChild(media);
+  clipContainer.appendChild(responsiveWrapper);
+  clipContainer.appendChild(clipLabel);
+  clipContainer.appendChild(deleteButton);
+  soundClips.appendChild(clipContainer);
+}
+record.onclick = () => {
+  audioChunks = [];
+  videoChunks = []; // ✅ Clear previous video data
+  audioRecorder.start();
+  videoRecorder.start();
+  // document.getElementById("toggleButton").click();
+  toggleRecognition()
+  record.style.background = "red";
+  stop.disabled = false;
+  record.disabled = true;
+};
+stop.onclick = () => {
+  audioRecorder.stop();
+  videoRecorder.stop();
+  // document.getElementById("toggleButton").click();
+  toggleRecognition()
+  // audioStream.getTracks().forEach(track => track.stop());
+  // videoStream.getTracks().forEach(track => track.stop());
+  record.style.background = "";
+  record.style.color = "";
+  stop.disabled = true;
+  record.disabled = false;
+};
+function toggleCameraFacing() {
+  currentFacingMode = currentFacingMode === "user" ? "environment" : "user";
+  startVideoStream(currentFacingMode);
+}
+// Auto-init on load
+window.onload = () => {
+  startAudioStream();
+  startVideoStream(currentFacingMode);
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    document.getElementById("toggleCameraBtn").style.display = "inline-block";
+  }
+};
+  // Function to generate a random string of characters
+  function generateRandomString(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+  // Function to generate a random file name for webm
+  function generateRandomFileName() {
+    const timestamp = new Date().getTime(); // Add a timestamp to ensure uniqueness
+    const randomString = generateRandomString(8); // Generate a random string of 8 characters
+    const fileName = `video_${timestamp}_${randomString}.webm`; // Customize the file name format
+    return fileName;
+  }
+  // var node = document.getElementById('appinfo');
+  // function hasGetUserMedia() {
+  //   return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+  // }
+  // hasGetUserMedia();
+  // if (hasGetUserMedia()) {
+  // // Good to go!
+  //   document.getElementById("dskinp").style.display = 'block';
+  //   //alert('Good to go!');
+  //   document.getElementById("mobinp").style.display = 'none';
+  // } else {
+  //   //alert('getUserMedia() is not supported by your browser');
+  //   document.getElementById("mobinp").style.display = 'block';
+  //   document.getElementById("dskinp").style.display = 'none';
+  // }
+  // node.style.display = node.style.display == 'none' ? '' : 'none';
+  // if (node.style.display == '') {
+  //     navigator.mediaDevices.getUserMedia({video: true}).then(handleSuccess);
+  // } else {
+  //     videoTracks.forEach(function(track) {track.stop()});
+  // }
+// }
+window.toggleRecognition = function () {
+  const micLabel = document.getElementById("micLabel");
+  const micIcon = document.getElementById("micIcon");
+  if (!recognizing) {
+    final_transcript = '';
+    recognition.lang = languageSelect.value;
+    recognition.start();
+    micLabel.textContent = "Speech to Text - Active";
+    micIcon.src = "mic-on.gif";
+  } else {
+    manuallyStopped = true;
+    recognition.stop();
+    const finalText = final_span.innerText.trim();
+    if (finalText) {
+      document.getElementById("userMessage").value = finalText;
+    }
+    final_span.innerHTML = '';
+    final_transcript = '';
+    micLabel.textContent = "Speech to Text - Inactive";
+    micIcon.src = "mic-off.gif";
+  }
+};
+function snapClick() {
+  ctr = ctr+1;
+  let bid = 'btn'+ctr.toString();
+  var context = snapshot.getContext('2d');
+  context.drawImage(player, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
+  // Convert canvas to blob and store globally
+  capturedImageDataURL = snapshotCanvas.toDataURL("image/jpeg", 1.0);
+  //ImgData = context.getImageData(0, 0, snapshotCanvas.width, snapshotCanvas.height);
+  // var fullQuality = snapshotCanvas.toDataURL("image/jpeg", 1.0);
+  // var image = new Image();
+  // image.src = snapshotCanvas.toDataURL("image/jpeg", 1.0);
+  var btn = document.createElement("button");
+  btn.setAttribute("class", "accordion");
+  btn.setAttribute("id", bid);
+  btn.setAttribute("onclick","myFunction()");
+  var t = document.createTextNode("Scan-"+ctr.toString());
+  btn.appendChild(t);
+  //para.appendChild(btn);
+  document.getElementById("tcon").appendChild(btn);
+  let cvsid = 'can-'+ctr.toString();
+  var can = document.createElement("img");
+  can.setAttribute("width", "100%");
+  can.setAttribute("ID", cvsid);
+  can.src = snapshotCanvas.toDataURL("image/jpeg", 1.0);
+  // usrImg.src = snapshotCanvas.toDataURL("image/jpeg", 1.0);
+  document.getElementById("tcon").appendChild(can);
+  const myList = document.querySelector('#tcon')
+  const lastListItem = myList.lastElementChild;
+  myList.insertBefore(lastListItem, myList.firstElementChild)
+  const lastListItem2 = myList.lastElementChild;
+  myList.insertBefore(lastListItem2, myList.firstElementChild)
+} 
+</script> </article> </div> </div> <a href=# class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </a> </main> <footer class=md-footer> <b>SPN</b> <div class="md-footer-meta md-typeset"> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": ".", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script> <script src=assets/javascripts/bundle.431f3d41.min.js></script> </script> <script>
       window.watsonAssistantChatOptions = {
         integrationID: "2c965e33-9bb7-479b-8fe5-992ec47ab105", // The ID of this integration.
         region: "us-east", // The region your integration is hosted in.
